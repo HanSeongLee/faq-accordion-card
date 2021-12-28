@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import styles from './style.module.scss';
+import FAQ from "../components/FAQ";
 
 export default function Home() {
   return (
@@ -53,6 +55,9 @@ export default function Home() {
       </Head>
 
       <main>
+        <section className={styles.container}>
+          <FAQ />
+        </section>
       </main>
     </>
   )

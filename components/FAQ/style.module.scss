@@ -1,0 +1,67 @@
+@import "styles/utils";
+
+.faq {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF url("/img/bg-pattern-mobile.svg") no-repeat;
+  background-position: top center;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+  border-radius: 23px;
+  padding: 132px 24px 48px;
+  max-width: 920px;
+
+  @include media(">desktop") {
+    background: #FFFFFF url("/img/bg-pattern-desktop.svg") no-repeat;
+    background-position: -576px -294px;
+    padding: 65px 95px 65px 475px;
+    min-height: 509px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -108px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: url("/img/illustration-woman-online-mobile.svg");
+    width: 240px;
+    height: 145px;
+
+    @include media(">desktop") {
+      top: 70px;
+      left: 0;
+      transform: initial;
+      content: "";
+      background: red;
+      background: url("/img/illustration-woman-online-desktop.svg");
+      background-position: right;
+      width: 388px;
+      height: 359px;
+    }
+  }
+
+  @include media(">desktop") {
+    &::after {
+      position: absolute;
+      top: 206px;
+      left: -92px;
+      content: url("/img/illustration-box-desktop.svg");
+      width: 90px;
+      height: 106px;
+      z-index: 1;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 38px;
+    color: #1E1F36;
+
+    @include media(">desktop") {
+      text-align: left;
+      font-size: 32px;
+      line-height: 32px;
+      margin-bottom: 43px;
+    }
+  }
+}
